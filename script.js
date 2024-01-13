@@ -1,15 +1,19 @@
-const boxesContainer = document.getElementById("boxes");
-const btn = document.getElementById("btn");
+if (typeof window !== "undefined") {
+  const boxesContainer = document.getElementById("boxes");
+  const btn = document.getElementById("btn");
 
-btn.addEventListener("click", () => {
-  boxesContainer.classList.toggle("big");
-});
+  btn.addEventListener("click", () => {
+    boxesContainer.classList.toggle("big");
+  });
 
-function CreateBoxes() {
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < array.length; j++) {
-      const box = document.createElement("div");
-      box.classList.add("box");
+  function CreateBoxes() {
+    for (let i = 0; i < 4; i++) {
+      for (let j = 0; j < 4; j++) {
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.style.backgroundPosition = `${-j * 125} ${-i * 125}px`;
+        boxesContainer.appendChild(box);
+      }
     }
   }
 }

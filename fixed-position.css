@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+}
+
+/* Fixed means that block is going to stay in place as you scroll its similar to absolute */
+
+#one {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  background: blue;
+}
+
+.outer {
+  width: 500px;
+  height: 300px;
+  overflow: scroll;
+  padding-left: 150px;
+}
